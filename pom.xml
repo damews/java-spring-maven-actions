@@ -63,12 +63,12 @@
 		</plugins>
 	</build>
 	
-	<distributionManagement>
-		<repository>
+    <distributionManagement>
+        <repository>
 	     		<id>github</id>
 	      		<name>GitHub Packages</name>
 	      		<url>https://maven.pkg.github.com/damews/java-spring-maven-actions</url>
 		</repository>
-  	</distributionManagement>
+    </distributionManagement>
 
 </project>
