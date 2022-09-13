@@ -29,6 +29,18 @@ jobs:
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
         cache: maven
+    
+    - run: mvn --batch-mode --update-snapshots package -DskipTests=true
+    - run: mkdir staging && cp target/** staging
+    - uses: actions/upload-artifact@v3
+      with:
+        name: Package
+        path: staging
+    - uses: ncipollo/release-action@v1
+      with:
+        body: 'My Release'
+        artifacts: "staging/**"
+        allowUpdates: true
 
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
