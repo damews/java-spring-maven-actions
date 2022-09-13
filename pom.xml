@@ -62,5 +62,13 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<distributionManagement>
+	    <repository>
+	      <id>github.repo</id>
+	      <name>damews Repository</name>
+	      <url>https://github.com/damews/java-spring-maven-actions</url>
+	    </repository>
+  	</distributionManagement>
 
 </project>
