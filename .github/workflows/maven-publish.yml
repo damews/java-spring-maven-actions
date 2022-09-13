@@ -14,6 +14,7 @@ jobs:
     uses: damews/java-spring-maven-actions/.github/workflows/ci-maven.yml@master
     
   release:
+    needs: [ build_and_test ]
     runs-on: ubuntu-latest
     permissions:
       contents: read
