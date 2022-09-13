@@ -64,11 +64,11 @@
 	</build>
 	
 	<distributionManagement>
-	    <repository>
-	      <id>github.repo</id>
-	      <name>damews Repository</name>
-	      <url>https://github.com/damews/java-spring-maven-actions</url>
-	    </repository>
+		<repository>
+	     		<id>github</id>
+	      		<name>GitHub Packages</name>
+	      		<url>https://maven.pkg.github.com/damews/java-spring-maven-actions</url>
+		</repository>
   	</distributionManagement>
 
 </project>
